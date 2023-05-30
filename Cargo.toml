@@ -1,0 +1,14 @@
+[package]
+name = "game"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+alsa = "0.7.0"
+bevy = { version = "0.10.1", features = ["dynamic_linking"] }
+big-brain = "0.17.0"
+#crystalorb = "0.3.0"
+libudev = "0.3.0"
+throne = "0.4.1"
