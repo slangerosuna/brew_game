@@ -1,0 +1,20 @@
+{
+    "type": "lldb",
+    "request": "launch",
+    "name": "game of life",
+    "cargo": {
+        "args": [
+            "build",
+            "--package=bevy"
+        ],
+        "filter": {
+            "name": "game of life",
+            "kind": "game"
+        }
+    },
+    "args": [],
+    "cwd": "${workspaceFolder}",
+    "env": {
+        "CARGO_MANIFEST_DIR": "${workspaceFolder}",
+    }
+}
