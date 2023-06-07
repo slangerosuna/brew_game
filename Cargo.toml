@@ -7,8 +7,15 @@ edition = "2021"
 
 [dependencies]
 alsa = "0.7.0"
-bevy = { version = "0.10.1", features = ["dynamic_linking"] }
+bevy = { version = "0.10.1" } #, features = ["dynamic_linking"] }
 big-brain = "0.17.0"
 #crystalorb = "0.3.0"
 libudev = "0.3.0"
 throne = "0.4.1"
+
+[profile.release]
+opt-level = 3       # Optimize for speed
+lto = true          # Enable link-time optimization
+codegen-units = 1   # Reduce number of codegen units to increase optimizations
+#panic = 'abort'    # Abort on panic
+strip = true        # Strip symbols from binary*
